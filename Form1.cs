@@ -1,4 +1,5 @@
-﻿using System.DirectoryServices;
+using System.DirectoryServices;
+using System.Net.Mail;
 using System.Text.RegularExpressions;
 
 namespace WinFormsApp6
@@ -16,13 +17,15 @@ namespace WinFormsApp6
             string password = textBox2.Text;
 
 
-            if(email == "admin" &&  password == "1234")
+            if (email == "admin" &&  password == "1234")
             {
-                MessageBox.Show("Đăng nhập thành công.");
+                MessageBox.Show("Đăng nhập thành công.","Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Đăng nhập thất bại.");
+                MessageBox.Show("Đăng nhập thất bại.","Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
